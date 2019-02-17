@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="activityPadding">16dp</dimen>
+    <dimen name="placeholderImage">60dp</dimen>
+    <dimen name="placeholderTextHeight">8dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+
+    <dimen name="_1dp">1dp</dimen>
+    <dimen name="_2dp">2dp</dimen>
+    <dimen name="_3dp">3dp</dimen>
+    <dimen name="_4dp">4dp</dimen>
+    <dimen name="_5dp">5dp</dimen>
+    <dimen name="_6dp">6dp</dimen>
+    <dimen name="_7dp">7dp</dimen>
+    <dimen name="_8dp">8dp</dimen>
+    <dimen name="_9dp">9dp</dimen>
+    <dimen name="_10dp">10dp</dimen>
+    <dimen name="_12dp">12dp</dimen>
+    <dimen name="_15dp">15dp</dimen>
+    <dimen name="_20dp">20dp</dimen>
+    <dimen name="_30dp">30dp</dimen>
+    <dimen name="_40dp">40dp</dimen>
+    <dimen name="_50dp">50dp</dimen>
+    <dimen name="_60dp">60dp</dimen>
+    <dimen name="_70dp">70dp</dimen>
+    <dimen name="_80dp">80dp</dimen>
+    <dimen name="_90dp">90dp</dimen>
+    <dimen name="_100dp">100dp</dimen>
+    <dimen name="_200dp">200dp</dimen>
+    <dimen name="_300dp">300dp</dimen>
+    <dimen name="_400dp">400dp</dimen>
+    <dimen name="_500dp">500dp</dimen>
+    <dimen name="_600dp">600dp</dimen>
+    <dimen name="_700dp">700dp</dimen>
+    <dimen name="_800dp">800dp</dimen>
+    <dimen name="_900dp">900dp</dimen>
+    <dimen name="_1000dp">1000dp</dimen>
+    <dimen name="_150dp">150dp</dimen>
+
+    <!--Text Sizes dimentions-->
+    <dimen name="_1sp">1sp</dimen>
+    <dimen name="_2sp">2sp</dimen>
+    <dimen name="_3sp">3sp</dimen>
+    <dimen name="_4sp">4sp</dimen>
+    <dimen name="_5sp">5sp</dimen>
+    <dimen name="_6sp">6sp</dimen>
+    <dimen name="_7sp">7sp</dimen>
+    <dimen name="_8sp">8sp</dimen>
+    <dimen name="_9sp">9sp</dimen>
+    <dimen name="_10sp">10sp</dimen>
+    <dimen name="_12sp">12sp</dimen>
+    <dimen name="_15sp">15sp</dimen>
+    <dimen name="_20sp">20sp</dimen>
+    <dimen name="_30sp">30sp</dimen>
+    <dimen name="_40sp">40sp</dimen>
+    <dimen name="_50sp">50sp</dimen>
+    <dimen name="_60sp">60sp</dimen>
+    <dimen name="_70sp">70sp</dimen>
+    <dimen name="_80sp">80sp</dimen>
+    <dimen name="_90sp">90sp</dimen>
+    <dimen name="_100sp">100sp</dimen>
+    <dimen name="_200sp">200sp</dimen>
+    <dimen name="_300sp">300sp</dimen>
+    <dimen name="_400sp">400sp</dimen>
+    <dimen name="_500sp">500sp</dimen>
+    <dimen name="_600sp">600sp</dimen>
+    <dimen name="_700sp">700sp</dimen>
+    <dimen name="_800sp">800sp</dimen>
+    <dimen name="_900sp">900sp</dimen>
+    <dimen name="_1000sp">1000sp</dimen>
+    <dimen name="_150sp">150sp</dimen>
+
+
+</resources>
