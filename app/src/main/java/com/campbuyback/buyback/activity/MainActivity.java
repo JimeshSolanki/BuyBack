@@ -34,8 +34,8 @@ public class MainActivity extends BaseActivity {
 
         actionBar = getSupportActionBar();
 
-        BottomNavigationView navigationView = findViewById(R.id.main_navigation_view);
-        navigationView.setOnNavigationItemSelectedListener(selectedListener);
+//        BottomNavigationView navigationView = findViewById(R.id.main_navigation_view);
+//        navigationView.setOnNavigationItemSelectedListener(selectedListener);
 
         loadFragment(new HomeFragment());
         actionBar.setTitle(mContext.getResources().getString(R.string.menu_home));
@@ -52,44 +52,44 @@ public class MainActivity extends BaseActivity {
         transaction.commit();
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener selectedListener =
-            new BottomNavigationView.OnNavigationItemSelectedListener() {
-                @Override
-                public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                    Fragment fragment;
-
-                    switch (menuItem.getItemId()) {
-                        case R.id.menu_bottom_home:
-                            actionBar.setTitle(mContext.getResources().getString(R.string.menu_home));
-                            fragment = new HomeFragment();
-                            loadFragment(fragment);
-                            return true;
-
-                        case R.id.menu_bottom_posts:
-                            actionBar.setTitle(mContext.getResources().getString(R.string.menu_post));
-                            fragment = new PostFragment();
-                            loadFragment(fragment);
-                            return true;
-
-                        case R.id.menu_bottom_wishlist:
-                            actionBar.setTitle(mContext.getResources().getString(R.string.menu_wishlist));
-                            fragment = new WishlistFragment();
-                            loadFragment(fragment);
-                            return true;
-
-                        case R.id.menu_bottom_cart:
-                            actionBar.setTitle(mContext.getResources().getString(R.string.menu_shopping_cart));
-                            fragment = new CartFragment();
-                            loadFragment(fragment);
-                            return true;
-
-                        case R.id.menu_bottom_profile:
-                            actionBar.setTitle(mContext.getResources().getString(R.string.menu_profile));
-                            fragment = new ProfileFragment();
-                            loadFragment(fragment);
-                            return true;
-                    }
-                    return false;
-                }
-            };
+//    private BottomNavigationView.OnNavigationItemSelectedListener selectedListener =
+//            new BottomNavigationView.OnNavigationItemSelectedListener() {
+//                @Override
+//                public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+//                    Fragment fragment;
+//
+//                    switch (menuItem.getItemId()) {
+//                        case R.id.menu_bottom_home:
+//                            actionBar.setTitle(mContext.getResources().getString(R.string.menu_home));
+//                            fragment = new HomeFragment();
+//                            loadFragment(fragment);
+//                            return true;
+//
+//                        case R.id.menu_bottom_posts:
+//                            actionBar.setTitle(mContext.getResources().getString(R.string.menu_post));
+//                            fragment = new PostFragment();
+//                            loadFragment(fragment);
+//                            return true;
+//
+//                        case R.id.menu_bottom_wishlist:
+//                            actionBar.setTitle(mContext.getResources().getString(R.string.menu_wishlist));
+//                            fragment = new WishlistFragment();
+//                            loadFragment(fragment);
+//                            return true;
+//
+//                        case R.id.menu_bottom_cart:
+//                            actionBar.setTitle(mContext.getResources().getString(R.string.menu_shopping_cart));
+//                            fragment = new CartFragment();
+//                            loadFragment(fragment);
+//                            return true;
+//
+//                        case R.id.menu_bottom_profile:
+//                            actionBar.setTitle(mContext.getResources().getString(R.string.menu_profile));
+//                            fragment = new ProfileFragment();
+//                            loadFragment(fragment);
+//                            return true;
+//                    }
+//                    return false;
+//                }
+//            };
 }
