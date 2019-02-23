@@ -1,21 +1,15 @@
 package com.campbuyback.buyback.activity;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.ActionBar;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.appcompat.app.ActionBar;
 import android.os.Bundle;
-import android.view.MenuItem;
 
 import com.campbuyback.buyback.R;
 import com.campbuyback.buyback.common.BaseActivity;
-import com.campbuyback.buyback.fragment.CartFragment;
 import com.campbuyback.buyback.fragment.HomeFragment;
-import com.campbuyback.buyback.fragment.PostFragment;
-import com.campbuyback.buyback.fragment.ProfileFragment;
-import com.campbuyback.buyback.fragment.WishlistFragment;
 
 public class MainActivity extends BaseActivity {
 
