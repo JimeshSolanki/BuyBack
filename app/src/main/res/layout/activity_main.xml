@@ -17,12 +17,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="?android:attr/windowBackground"
-        android:foreground="?attr/selectableItemBackground"
-        android:theme="@style/Widget.BottomNavigationView"
-        app:itemBackground="@color/colorPrimaryDark"
-        app:itemIconTint="@android:color/white"
-        app:itemTextColor="@android:color/white"
+        app:itemBackground="?attr/colorPrimary"
+        app:itemIconTint="@drawable/bottom_navigation_icons"
+        app:itemTextColor="@drawable/bottom_navigation_texts"
         app:menu="@menu/bottom_navigation_menu">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>

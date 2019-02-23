@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/menu_bottom_home"
         android:icon="@mipmap/ic_action_home"
-        android:title="@string/menu_home" />
+        android:title="@string/menu_home"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/menu_bottom_wishlist"
         android:icon="@mipmap/ic_action_favorite"
-        android:title="@string/menu_wishlist" />
+        android:title="@string/menu_wishlist"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/menu_bottom_posts"
         android:icon="@mipmap/ic_action_assignment"
-        android:title="@string/menu_post" />
+        android:title="@string/menu_post"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/menu_bottom_cart"
         android:icon="@mipmap/ic_action_shopping_cart"
-        android:title="@string/menu_shopping_cart" />
+        android:title="@string/menu_shopping_cart"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/menu_bottom_profile"
         android:icon="@mipmap/ic_action_account_circle"
-        android:title="@string/menu_profile" />
+        android:title="@string/menu_profile"
+        app:showAsAction="ifRoom" />
 </menu>
