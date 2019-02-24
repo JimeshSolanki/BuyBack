@@ -39,6 +39,7 @@
                 android:layout_marginStart="@dimen/_4dp"
                 android:layout_marginEnd="@dimen/_20dp"
                 android:ellipsize="end"
+                android:fontFamily="@font/googlesans_medium"
                 android:gravity="center_vertical"
                 android:maxLines="1"
                 android:padding="@dimen/_4dp"
