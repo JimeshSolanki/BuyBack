@@ -5,4 +5,9 @@
     <color name="colorAccent">#949399</color>
 
     <color name="background">#aaa</color>
+
+    <color name="toastSuccess">#2E7D32</color>
+    <color name="toastInfo">#283593</color>
+    <color name="toastWarning">#f9a825</color>
+    <color name="toastError">#C62828</color>
 </resources>

@@ -1,14 +1,9 @@
 package com.campbuyback.buyback.activity;
 
 import android.content.Context;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.appcompat.app.ActionBar;
-
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.FrameLayout;
 
 import com.campbuyback.buyback.R;
 import com.campbuyback.buyback.common.BaseActivity;
@@ -19,11 +14,19 @@ import com.campbuyback.buyback.fragment.ProfileFragment;
 import com.campbuyback.buyback.fragment.WishlistFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends BaseActivity {
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
+public class MainActivity extends BaseActivity implements
+        BottomNavigationView.OnNavigationItemSelectedListener {
 
     private Context mContext = MainActivity.this;
     private final static String TAG = MainActivity.class.getSimpleName();
     private ActionBar actionBar;
+    private FrameLayout frameLayout;
+    private BottomNavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +39,8 @@ public class MainActivity extends BaseActivity {
 
         actionBar = getSupportActionBar();
 
-        BottomNavigationView navigationView = findViewById(R.id.main_navigation_view);
-//        navigationView.setOnNavigationItemSelectedListener(selectedListener);
+        navigationView = findViewById(R.id.main_navigation_view);
+//        navigationView.setOnNavigationItemSelectedListener(this);
 
         loadFragment(new HomeFragment());
         actionBar.setTitle(mContext.getResources().getString(R.string.menu_home));
@@ -48,50 +51,50 @@ public class MainActivity extends BaseActivity {
     }
 
     private void loadFragment(Fragment fragment) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.main_frame_layout, fragment);
-        transaction.addToBackStack(null);
+        FragmentTransaction transaction = getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.main_frame_layout, fragment)
+                .addToBackStack(null);
         transaction.commit();
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener selectedListener =
-            new BottomNavigationView.OnNavigationItemSelectedListener() {
-                @Override
-                public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                    Fragment fragment;
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                    switch (menuItem.getItemId()) {
-                        case R.id.menu_bottom_home:
-                            actionBar.setTitle(mContext.getResources().getString(R.string.menu_home));
-                            fragment = new HomeFragment();
-                            loadFragment(fragment);
-                            return true;
+        Fragment fragment;
 
-                        case R.id.menu_bottom_posts:
-                            actionBar.setTitle(mContext.getResources().getString(R.string.menu_post));
-                            fragment = new PostFragment();
-                            loadFragment(fragment);
-                            return true;
+        switch (item.getItemId()) {
+            case R.id.menu_bottom_home:
+                actionBar.setTitle(mContext.getResources().getString(R.string.menu_home));
+                fragment = new HomeFragment();
+                loadFragment(fragment);
+                return true;
 
-                        case R.id.menu_bottom_wishlist:
-                            actionBar.setTitle(mContext.getResources().getString(R.string.menu_wishlist));
-                            fragment = new WishlistFragment();
-                            loadFragment(fragment);
-                            return true;
+            case R.id.menu_bottom_posts:
+                actionBar.setTitle(mContext.getResources().getString(R.string.menu_post));
+                fragment = new PostFragment();
+                loadFragment(fragment);
+                return true;
 
-                        case R.id.menu_bottom_cart:
-                            actionBar.setTitle(mContext.getResources().getString(R.string.menu_shopping_cart));
-                            fragment = new CartFragment();
-                            loadFragment(fragment);
-                            return true;
+            case R.id.menu_bottom_wishlist:
+                actionBar.setTitle(mContext.getResources().getString(R.string.menu_wishlist));
+                fragment = new WishlistFragment();
+                loadFragment(fragment);
+                return true;
 
-                        case R.id.menu_bottom_profile:
-                            actionBar.setTitle(mContext.getResources().getString(R.string.menu_profile));
-                            fragment = new ProfileFragment();
-                            loadFragment(fragment);
-                            return true;
-                    }
-                    return false;
-                }
-            };
+            case R.id.menu_bottom_cart:
+                actionBar.setTitle(mContext.getResources().getString(R.string.menu_shopping_cart));
+                fragment = new CartFragment();
+                loadFragment(fragment);
+                return true;
+
+            case R.id.menu_bottom_profile:
+                actionBar.setTitle(mContext.getResources().getString(R.string.menu_profile));
+                fragment = new ProfileFragment();
+                loadFragment(fragment);
+                return true;
+        }
+
+        return false;
+    }
 }

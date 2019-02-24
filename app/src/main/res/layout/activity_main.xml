@@ -20,6 +20,7 @@
         app:itemBackground="?attr/colorPrimary"
         app:itemIconTint="@drawable/bottom_navigation_icons"
         app:itemTextColor="@drawable/bottom_navigation_texts"
+        app:labelVisibilityMode="auto"
         app:menu="@menu/bottom_navigation_menu">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
