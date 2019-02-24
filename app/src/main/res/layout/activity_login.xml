@@ -1,104 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/background_dark"
-    tools:context=".activity.LoginActivity">
 
-    <LinearLayout
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:background="@android:color/background_dark"
+        tools:context=".activity.LoginActivity">
 
-        <ImageView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.6"
-            android:contentDescription="@string/app_name"
-            android:scaleType="fitXY" />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.4"
-            app:cardElevation="@dimen/_20dp">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="@dimen/_20dp">
+                android:layout_height="0dp"
+                android:layout_weight="0.6"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tv_title_phone_number"
-                    style="@style/TextInputEditTextStyle"
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.4"
+                app:cardElevation="@dimen/_20dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"
-                    android:text="Verify Your Phone Number"
-                    android:textSize="@dimen/_20sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="HardcodedText" />
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_20dp">
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tv_info_phone_number"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10dp"
-                    android:fontFamily="@font/googlesans_medium"
-                    android:gravity="center"
-                    android:text="Please enter your phone number. You will receive a text message with your verification code."
-                    android:textSize="@dimen/_15sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_title_phone_number"
-                    tools:ignore="HardcodedText" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tnl_phone_number"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    app:boxBackgroundColor="@android:color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/btn_phone_number"
-                    app:layout_constraintStart_toStartOf="parent">
-
-                    <com.google.android.material.textfield.TextInputEditText
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_title_phone_number"
+                        style="@style/TextInputEditTextStyle"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="Mobile Number"
-                        android:inputType="numberSigned"
-                        android:maxLength="12"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="Verify Your Phone Number"
+                        android:textSize="@dimen/_20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
                         tools:ignore="HardcodedText" />
 
-                </com.google.android.material.textfield.TextInputLayout>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_info_phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:fontFamily="@font/googlesans_medium"
+                        android:gravity="center"
+                        android:text="Please enter your phone number. You will receive a text message with your verification code."
+                        android:textSize="@dimen/_15sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_title_phone_number"
+                        tools:ignore="HardcodedText" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_phone_number"
-                    style="@style/Widget.MaterialComponents.Button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_4dp"
-                    android:layout_marginEnd="8dp"
-                    android:fontFamily="@font/googlesans_bold"
-                    android:text="VERIFY"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/tnl_phone_number"
-                    tools:ignore="HardcodedText" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tnl_phone_number"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundColor="@android:color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/btn_phone_number"
+                        app:layout_constraintStart_toStartOf="parent">
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Mobile Number"
+                            android:inputType="numberSigned"
+                            android:maxLength="12"
+                            tools:ignore="HardcodedText" />
 
-        </com.google.android.material.card.MaterialCardView>
+                    </com.google.android.material.textfield.TextInputLayout>
 
-    </LinearLayout>
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_phone_number"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_4dp"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/googlesans_bold"
+                        android:text="VERIFY"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tnl_phone_number"
+                        tools:ignore="HardcodedText" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

@@ -7,5 +7,4 @@ public class AppConstant {
     public final static int TOAST_WARNING = 3;
     public final static int TOAST_ERROR = 4;
 
-
 }

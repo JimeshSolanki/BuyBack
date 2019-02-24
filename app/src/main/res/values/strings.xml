@@ -7,7 +7,7 @@
     <string name="mobile_number">Mobile Number</string>
     <string name="proceed">PROCEED</string>
     <string name="otp_instruction">Waiting to automatically detect an SMS sent to your mobile number.</string>
-    <string name="tv_str_resend_code">Didn\'t receive the code? <b>RESEND CODE</b></string>
+    <string name="tv_str_resend_code"><b>RESEND CODE</b></string>
 
     <!--Bottom Navigation Menu-->
     <string name="menu_home">Home</string>
