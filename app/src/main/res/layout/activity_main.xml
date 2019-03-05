@@ -33,5 +33,15 @@
 
         </com.google.android.material.bottomnavigation.BottomNavigationView>
 
+        <fragment
+            android:id="@+id/my_nav_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toTopOf="@id/main_navigation_view"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navGraph="@navigation/navigation" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

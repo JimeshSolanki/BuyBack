@@ -18,6 +18,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends BaseActivity implements
         BottomNavigationView.OnNavigationItemSelectedListener {
@@ -40,7 +42,8 @@ public class MainActivity extends BaseActivity implements
         actionBar = getSupportActionBar();
 
         navigationView = findViewById(R.id.main_navigation_view);
-//        navigationView.setOnNavigationItemSelectedListener(this);
+
+        NavigationUI.setupWithNavController(navigationView, Navigation.findNavController(this, R.id.my_nav_host_fragment));
 
         loadFragment(new HomeFragment());
         actionBar.setTitle(mContext.getResources().getString(R.string.menu_home));
