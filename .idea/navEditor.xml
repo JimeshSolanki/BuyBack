@@ -19,7 +19,7 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_launcher_home_to_main_activity">
+                            <entry key="action_launcher_home_to_login_activity">
                               <value>
                                 <LayoutPositions />
                               </value>

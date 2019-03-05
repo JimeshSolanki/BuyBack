@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="handler"
+            type="com.campbuyback.buyback.handler.OTPActivityHandler" />
+
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".activity.OTPActivity">
@@ -44,11 +50,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_20dp"
-            android:text="+91-8238345247"
             android:textSize="@dimen/_30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_otp_instruction" />
+            app:layout_constraintTop_toBottomOf="@id/tv_otp_instruction"
+            tools:text="+91 82******47" />
 
         <TextView
             android:id="@+id/tv_otp_enter_6_digit"
@@ -56,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_30dp"
-            android:text="Enter 6 - Digit code"
+            android:text="@string/enter_6_digit_code"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_otp_mobile_number" />
@@ -81,7 +87,8 @@
                 android:inputType="numberSigned"
                 android:maxLength="1"
                 android:textSize="@dimen/_20sp"
-                android:theme="@style/TextInputEditTextStyle" />
+                android:theme="@style/TextInputEditTextStyle"
+                tools:ignore="Autofill,LabelFor" />
 
             <EditText
                 android:id="@+id/edt_otp_d2"
@@ -93,7 +100,8 @@
                 android:inputType="numberSigned"
                 android:maxLength="1"
                 android:textSize="@dimen/_20sp"
-                android:theme="@style/TextInputEditTextStyle" />
+                android:theme="@style/TextInputEditTextStyle"
+                tools:ignore="Autofill,LabelFor" />
 
             <EditText
                 android:id="@+id/edt_otp_d3"
@@ -105,7 +113,8 @@
                 android:inputType="numberSigned"
                 android:maxLength="1"
                 android:textSize="@dimen/_20sp"
-                android:theme="@style/TextInputEditTextStyle" />
+                android:theme="@style/TextInputEditTextStyle"
+                tools:ignore="Autofill,LabelFor" />
 
             <EditText
                 android:id="@+id/edt_otp_d4"
@@ -117,7 +126,8 @@
                 android:inputType="numberSigned"
                 android:maxLength="1"
                 android:textSize="@dimen/_20sp"
-                android:theme="@style/TextInputEditTextStyle" />
+                android:theme="@style/TextInputEditTextStyle"
+                tools:ignore="Autofill,LabelFor" />
 
             <EditText
                 android:id="@+id/edt_otp_d5"
@@ -141,7 +151,8 @@
                 android:inputType="numberSigned"
                 android:maxLength="1"
                 android:textSize="@dimen/_20sp"
-                android:theme="@style/TextInputEditTextStyle" />
+                android:theme="@style/TextInputEditTextStyle"
+                tools:ignore="Autofill,LabelFor" />
 
         </LinearLayout>
 
@@ -156,15 +167,22 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ll_otp_edittexts" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_otp_submit"
-            android:layout_width="match_parent"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20dp"
             android:background="@color/colorAccent"
-            android:gravity="center|center_horizontal|center_vertical"
-            android:text="Verify Now"
-            android:textColor="@android:color/white"
+            android:onClick="@{handler::onVerifyButtonClick}"
+            android:paddingStart="@dimen/_100dp"
+            android:paddingEnd="@dimen/_100dp"
+            android:text="@string/verify_now"
+            android:textColor="@color/colorPrimary"
             android:textSize="@dimen/_20sp"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
