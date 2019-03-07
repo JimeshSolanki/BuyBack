@@ -139,7 +139,8 @@
                 android:inputType="numberSigned"
                 android:maxLength="1"
                 android:textSize="@dimen/_20sp"
-                android:theme="@style/TextInputEditTextStyle" />
+                android:theme="@style/TextInputEditTextStyle"
+                tools:ignore="Autofill,LabelFor" />
 
             <EditText
                 android:id="@+id/edt_otp_d6"
