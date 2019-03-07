@@ -13,36 +13,37 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="@dimen/_20dp"
         tools:context=".activity.OTPActivity">
 
-        <ImageView
-            android:id="@+id/iv_otp_mobile"
-            android:layout_width="@dimen/_80dp"
-            android:layout_height="@dimen/_80dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="@dimen/_20dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="@dimen/_20dp"
-            android:contentDescription="@string/app_name"
-            android:src="@drawable/buyback_blue"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_verification_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40dp"
+            android:gravity="start"
+            android:padding="@dimen/_8dp"
+            android:text="@string/verification"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_30sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_otp_instruction"
-            style="@style/TextViewStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_8dp"
             android:layout_marginTop="@dimen/_8dp"
+            android:fontFamily="@font/googlesans_medium"
+            android:gravity="start"
             android:padding="@dimen/_8dp"
             android:text="@string/otp_instruction"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_15sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/iv_otp_mobile" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_verification_label" />
 
         <TextView
             android:id="@+id/tv_otp_mobile_number"
@@ -170,17 +171,17 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_otp_submit"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_50dp"
             android:layout_marginBottom="@dimen/_20dp"
             android:background="@color/colorAccent"
             android:onClick="@{handler::onVerifyButtonClick}"
             android:paddingStart="@dimen/_100dp"
             android:paddingEnd="@dimen/_100dp"
             android:text="@string/verify_now"
-            android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/_20sp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
