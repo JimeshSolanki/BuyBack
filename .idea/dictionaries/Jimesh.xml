@@ -4,8 +4,16 @@
       <w>autofill</w>
       <w>campbuyback</w>
       <w>edittexts</w>
+      <w>emailaddress</w>
+      <w>firstname</w>
+      <w>getbyid</w>
       <w>googlesans</w>
+      <w>lastname</w>
+      <w>middlename</w>
+      <w>mobileno</w>
       <w>progragon</w>
+      <w>roleid</w>
+      <w>rolename</w>
       <w>technolabs</w>
       <w>wishlist</w>
     </words>
