@@ -12,28 +12,32 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/_15dp"
-        shimmer:duration="1000">
+        shimmer:duration="1000"
+        shimmer:layout_constraintBottom_toBottomOf="parent"
+        shimmer:layout_constraintEnd_toEndOf="parent"
+        shimmer:layout_constraintStart_toStartOf="parent"
+        shimmer:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <include layout="@layout/row_book_item" />
+            <include layout="@layout/skeleton_products" />
 
-            <include layout="@layout/row_book_item" />
+            <include layout="@layout/skeleton_products" />
 
-            <include layout="@layout/row_book_item" />
+            <include layout="@layout/skeleton_products" />
 
-            <include layout="@layout/row_book_item" />
+            <include layout="@layout/skeleton_products" />
 
-            <include layout="@layout/row_book_item" />
+            <include layout="@layout/skeleton_products" />
 
-            <include layout="@layout/row_book_item" />
+            <include layout="@layout/skeleton_products" />
 
-            <include layout="@layout/row_book_item" />
+            <include layout="@layout/skeleton_products" />
 
-            <include layout="@layout/row_book_item" />
+            <include layout="@layout/skeleton_products" />
         </LinearLayout>
     </com.facebook.shimmer.ShimmerFrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

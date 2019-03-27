@@ -2,7 +2,7 @@ package com.campbuyback.buyback.util;
 
 public class AppConstant {
 
-    public final static String BASE_URL = "http://192.168.0.110:3030/api/";
+    public final static String BASE_URL = "http://192.168.43.110:3030/api/v1/";
 
     public final static int TOAST_SUCCESS = 1;
     public final static int TOAST_INFO = 2;

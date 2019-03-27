@@ -18,8 +18,7 @@ import androidx.databinding.BindingMethods;
 
 public class MainActivityHandler {
 
-    private Context mContext;
-
+    protected Context mContext;
 
     public MainActivityHandler(Context mContext) {
         this.mContext = mContext;
